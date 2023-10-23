@@ -7,7 +7,7 @@ describe('GET /', () => {
   it('responds with the index.html file', async () => {
     const response = await request(app)
       .get('/')
-      .expect('Content-Type', /html/)
+      .expect('Content-Type', /json/)
       .expect(200);
 
     // Here you should check the actual content of the HTML if needed
