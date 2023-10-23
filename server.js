@@ -1,8 +1,9 @@
 // server.js
 const app = require('./app');
-
-const PORT = process.env.PORT || 3000; // This is the important line
-
-app.listen(PORT, () => {
+let port = process.env.PORT;
+if (port == null || port === "") {
+  port = 3000; // default port to listen if there's nothing from the environment (for local development)
+}
+app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
