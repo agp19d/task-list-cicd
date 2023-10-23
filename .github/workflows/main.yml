@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: ['12.x'] # if you plan to add more versions, list them here
+        node_version: ['14.x'] # if you plan to add more versions, list them here
     steps:
     - uses: actions/checkout@v2
 
